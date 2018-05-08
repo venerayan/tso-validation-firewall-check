@@ -33,6 +33,4 @@ Generate the windows.csv file, see the example windows.csv on the current folder
 ```
 
 ***Copy the out/windows_output.csv on the current folder.***
-# tso-validation2
-# tso-validation2
-# tso-validation-firewall-check
+
