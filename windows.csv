@@ -1,0 +1,4 @@
+Hostname,Check-Host,Port,IPAddress,CPUCore,RAM,Disk
+sdcgisazapmdw04,sdcgisazapmdw02,90,10.193.177.97,2,4,532
+,sdcgisazapmdw02,3389,
+sdcgisazapmdw02,,,10.193.177.99,2,16,1044

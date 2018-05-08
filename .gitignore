@@ -1,0 +1,14 @@
+*.retry
+secret
+wins
+wins2
+*_output.csv
+epel*
+temp*
+sshcopy
+server.yml
+linux
+linux2
+windows
+error
+cp-csv

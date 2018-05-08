@@ -1,0 +1,7 @@
+---
+
+ - hosts: localhost
+   become: false
+  
+   roles:
+     - validate-linux1

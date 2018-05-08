@@ -1,0 +1,47 @@
+---
+
+- name: Create linux inventory 1
+  shell: awk -F',' 'FNR > 1 { print  $1 }' linux.csv > temp
+  delegate_to: localhost
+  run_once: true
+
+- name: Create linux inventory 2
+  shell: awk -F',' 'FNR > 1 { print  $2 }' linux.csv > temp2
+  delegate_to: localhost
+  run_once: true
+
+- name: Create linux inventory - remove empty lines 3
+  shell: awk NF temp > linux
+  delegate_to: localhost
+  run_once: true
+
+- name: Create linux inventory - remove empty lines 4
+  shell: awk NF temp2 > temp3
+  delegate_to: localhost
+  run_once: true
+ 
+- name: Create linux inventory 5
+  shell: cat temp3 | uniq > linux2
+  delegate_to: localhost
+  run_once: true
+
+- name: Create loop variables 1
+  shell: chmod u+x create-loop.py
+  delegate_to: localhost
+  run_once: true
+  
+- name: Create loop variables 2
+  shell: chmod u+x validate.py
+  delegate_to: localhost
+  run_once: true
+  
+- name: Create loop variables 3
+  shell: ./create-loop.py linux.csv
+  delegate_to: localhost
+  run_once: true
+
+- name: Create loop variables 4
+  shell: cp roles/validate-linux2/vars/server.yml roles/checkport-linux/vars/server.yml
+  delegate_to: localhost
+  run_once: true
+  

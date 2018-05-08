@@ -1,0 +1,34 @@
+---
+
+- hosts: all
+  become: true
+
+  vars:
+
+    servers:
+      - server1: sdcgisazapmdw09
+        server2: sdcgisazapmdw10
+        port: 80
+      - server1: sdcgisazapmdw09
+        server2: sdcgisazapmdw10
+        port: 22                                                                                                                                           
+
+  tasks:
+
+    - name: check the port
+      shell: netstat -tunlp | grep ":{{ item.port }} " | sed -e 's/.*\///'
+      args:
+        executable: /bin/bash
+      register: noport
+      when: item.server2 == ansible_hostname      
+      with_items: "{{ servers }}"  
+
+    - debug: var=noport
+   
+    - name: put port 
+      shell: nc -l {{ item.item.port }}
+      async: 1200
+      poll: 0
+      when: item.item.server2 == ansible_hostname and item.stdout == ""
+      with_items: "{{ noport.results }}"
+ 

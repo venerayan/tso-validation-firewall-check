@@ -1,0 +1,23 @@
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [sdcgisazapmdw02]
+
+TASK [checkport-windows : Include server firewall to check] ********************
+ok: [sdcgisazapmdw02]
+
+TASK [checkport-windows : Obtain information about a powercat] *****************
+ok: [sdcgisazapmdw02]
+
+TASK [checkport-windows : Copy powercat] ***************************************
+ok: [sdcgisazapmdw02]
+
+TASK [checkport-windows : Put listening port using powercat] *******************
+changed: [sdcgisazapmdw02] => (item={u'server1': u'sdcgisazapmdw04', u'server2': u'sdcgisazapmdw02', u'port': 90})
+failed: [sdcgisazapmdw02] (item={u'server1': u'sdcgisazapmdw04', u'server2': u'sdcgisazapmdw02', u'port': 3389}) => {"changed": true, "cmd": ". powercat.ps1; powercat -t 600 -l -p 3389 #if port already listening, it will be just ignored.", "delta": "0:00:00.968726", "end": "2018-03-29 07:34:47.560799", "item": {"port": 3389, "server1": "sdcgisazapmdw04", "server2": "sdcgisazapmdw02"}, "msg": "non-zero return code", "rc": 1, "start": "2018-03-29 07:34:46.592072", "stderr": "", "stderr_lines": [], "stdout": "The selected port 3389 is already in use.\r\n", "stdout_lines": ["The selected port 3389 is already in use."]}
+	to retry, use: --limit @/home/venerari@Ontario.ad.gov.on.ca/ansible/tso-validation/checkport-windows.retry
+
+PLAY RECAP *********************************************************************
+sdcgisazapmdw02            : ok=4    changed=0    unreachable=0    failed=1   
+
