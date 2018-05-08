@@ -3,10 +3,15 @@
 - name: Include server firewall to check
   include_vars: server.yml
   
+- name: Check NC
+  shell: rpm -qa nmap-ncat*
+  register: install
+            
 - name: Install NC
   yum: 
     name: nmap-ncat
     state: latest
+  when: install is not succeeded
 
 - name: Close nc if it is still running
   shell: pkill -fx 'nc -l {{ item.port }} --keep-open'
