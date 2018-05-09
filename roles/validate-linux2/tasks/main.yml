@@ -112,22 +112,3 @@
   when: item.item.server1 == ansible_hostname
   with_items: "{{ out.results }}"
     
-- name: Fetching file
-  fetch:
-    src: /tmp/{{ ansible_hostname }}_output.csv
-    dest: ./{{ ansible_hostname }}_output.csv
-    flat: yes
-
-#- name: Execute Validation
-#  shell: ./validate.py linux
-#  args:
-#    executable: /bin/bash
-#  delegate_to: localhost
-#  run_once: true
-
-- name: Copy linux csv to first client
-  copy:
-    src: *_output.csv
-    dest: *_output.csv
-  run_once: true
-  mode: 0022
