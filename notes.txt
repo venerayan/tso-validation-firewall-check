@@ -1,0 +1,8 @@
+Tower notes!
+
+projects git need check on clean and update on launch
+
+on linux2 inventory sources check overwrite/ovderwrite variables/update on launch
+
+on linux inventory sources check overwrite/ovderwrite variables/update on launch
+

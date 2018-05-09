@@ -5,5 +5,4 @@ temp*
 sshcopy
 error
 cp-csv
-linux_output.csv
-windows_output.csv
+*_output.csv
