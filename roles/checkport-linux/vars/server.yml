@@ -1,8 +1,8 @@
 ---
 servers:
- - server1: vm1
-   server2: vm2
+ - server1: sdcgisazwhweb05
+   server2: sdcgisazwhweb06
    port: 22
- - server1: vm2
-   server2: vm1
-   port: 22
+ - server1: sdcgisazwhweb06
+   server2: sdcgisazwhweb05
+   port: 80

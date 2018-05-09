@@ -1,2 +1,2 @@
-vm2 ansible_host=192.168.3.129
-vm1 ansible_host=192.168.3.128
+sdcgisazwhweb06 ansible_host=10.193.177.222
+sdcgisazwhweb05 ansible_host=10.193.177.222
