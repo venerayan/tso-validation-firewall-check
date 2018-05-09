@@ -3,7 +3,6 @@
 ***Clone this repository***
 
 ```
-***No official repo yet***
 git clone https://github.com/xxxxxxxxxxxxxxxxxxxxxx
 cd tso-validation
 
