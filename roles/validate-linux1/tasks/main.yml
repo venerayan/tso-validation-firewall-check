@@ -1,12 +1,12 @@
 ---
 
 - name: Create linux inventory 1
-  shell: awk -F',' 'FNR > 1 { print  $1 }' linux.csv > temp
+  shell: awk -F',' 'FNR > 1 { print  $1 " ansible_host="$4 }' linux.csv > temp
   delegate_to: localhost
   run_once: true
 
 - name: Create linux inventory 2
-  shell: awk -F',' 'FNR > 1 { print  $2 }' linux.csv > temp2
+  shell: awk -F',' 'FNR > 1 { print  $2 " ansible_host="$8 }' linux.csv > temp2
   delegate_to: localhost
   run_once: true
 
