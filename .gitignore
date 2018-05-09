@@ -3,6 +3,5 @@ secret
 epel*
 temp*
 sshcopy
-server.yml
 error
 cp-csv
