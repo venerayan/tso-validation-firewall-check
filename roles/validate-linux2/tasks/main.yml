@@ -119,6 +119,11 @@
 
 #- meta: end_play
 
+- name: Make validate executable
+  shell: chmod u+x validate.py
+  delegate_to: localhost
+  run_once: true
+
 - name: Execute Validation
   shell: ./validate.py linux
   args:
