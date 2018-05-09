@@ -11,7 +11,9 @@
   yum: 
     name: nmap-ncat
     state: latest
-  when: install is succeeded
+  when: install is not succeeded
+  
+#- meta: end_play
 
 - name: Close nc if it is still running
   shell: pkill -fx 'nc -l {{ item.port }} --keep-open'

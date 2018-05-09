@@ -11,7 +11,7 @@
   yum: 
     name: nmap-ncat
     state: latest
-  when: install is succeeded    
+  when: install is not succeeded    
 
 - name: Get hostname
   shell: echo "{{ ansible_hostname }}"  > /tmp/{{ ansible_hostname }}_data.csv
