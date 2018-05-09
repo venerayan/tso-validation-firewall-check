@@ -9,3 +9,7 @@ on linux2 inventory sources check overwrite/ovderwrite variables/update on launc
 
 on linux inventory sources check overwrite/ovderwrite variables/update on launch
 
+Run validation1, click update on the scm, then update the inventories linux and linux2.
+Check if the inventories are fine.
+
+Go ahead with validation2 and validation3.
