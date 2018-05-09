@@ -123,6 +123,7 @@
   shell: chmod u+x validate.py
   delegate_to: localhost
   run_once: true
+  become: no
 
 - name: Execute Validation
   shell: ./validate.py linux
@@ -130,6 +131,7 @@
     executable: /bin/bash
   delegate_to: localhost
   run_once: true
+  become: no
 
 - name: Copy linux csv to first client
   copy:
