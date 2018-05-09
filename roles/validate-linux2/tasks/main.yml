@@ -118,16 +118,16 @@
     dest: ./{{ ansible_hostname }}_output.csv
     flat: yes
 
-- name: Execute Validation
-  shell: ./validate.py linux
-  args:
-    executable: /bin/bash
-  delegate_to: localhost
-  run_once: true
+#- name: Execute Validation
+#  shell: ./validate.py linux
+#  args:
+#    executable: /bin/bash
+#  delegate_to: localhost
+#  run_once: true
 
 - name: Copy linux csv to first client
   copy:
-    src: linux_output.csv
-    dest: linux_output.csv
+    src: *_output.csv
+    dest: *_output.csv
   run_once: true
   mode: 0022
