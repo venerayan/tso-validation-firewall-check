@@ -6,3 +6,4 @@ sshcopy
 error
 cp-csv
 *_output.csv
+server.yml

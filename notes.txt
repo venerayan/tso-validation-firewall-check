@@ -1,6 +1,9 @@
 Tower notes!
 
-projects git need check on clean and update on launch
+
+projects git 
+need check on clean, delete on update and update on launch (only on the first run)
+uncheck delete on update
 
 on linux2 inventory sources check overwrite/ovderwrite variables/update on launch
 
