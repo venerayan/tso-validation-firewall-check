@@ -1,8 +1,0 @@
----
-servers:
- - server1: sdcgisazwhweb05
-   server2: sdcgisazwhweb06
-   port: 22
- - server1: sdcgisazwhweb06
-   server2: sdcgisazwhweb05
-   port: 80
