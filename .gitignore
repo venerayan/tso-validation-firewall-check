@@ -1,13 +1,8 @@
 *.retry
 secret
-wins
-wins2
 epel*
 temp*
 sshcopy
 server.yml
-linux
-linux2
-windows
 error
 cp-csv
