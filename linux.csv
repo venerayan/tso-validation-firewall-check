@@ -1,4 +1,4 @@
 Hostname,Check-Host,Port,IPAddress,CPUCore,RAM,Disk,Check-Host-ip
 sdcgisazapmdw09,sdcgisazapmdw10,22,10.193.177.220,1,0.953384,21.5,10.193.177.221
-,sdcgisazapmdw10,80,,,,,192.168.3.130
+,sdcgisazapmdw10,80,,,,,10.193.177.221
 sdcgisazapmdw10,sdcgisazapmdw09,8080,10.193.177.221,1,0.953384,21.5,10.193.177.220
