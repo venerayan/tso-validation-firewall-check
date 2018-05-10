@@ -3,9 +3,9 @@
 - name: Include server firewall to check
   include_vars: server.yml
   
-- name: Check NC
-  shell: rpm -qa nmap-ncat*
-  register: install
+#- name: Check NC
+#  shell: rpm -qa nmap-ncat*
+#  register: install
             
 - name: Install NC
   yum: 
