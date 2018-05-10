@@ -46,7 +46,7 @@
   run_once: true
 
 - name: Create loop variables 4
-  shell: cp roles/validate-linux2/vars/server.yml roles/validate-linux1/vars/server.yml
+  shell: cp roles/validate-linux3/vars/server.yml roles/validate-linux2/vars/server.yml
   delegate_to: localhost
   run_once: true
   
