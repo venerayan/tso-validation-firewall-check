@@ -83,7 +83,7 @@ from_csv_to_yaml(sys.argv[1])
 file_name1=os.path.splitext(os.path.basename(sys.argv[1]))[0]
 file_name=file_name1.lower()
 if (re.search("linux", file_name,re.IGNORECASE)) or (re.search("unix", file_name,re.IGNORECASE)):
-    copy("./server.yml", "./roles/validate-linux2/vars/.")
+    copy("./server.yml", "./roles/validate-linux3/vars/.")
 elif (re.search("window", file_name,re.IGNORECASE)) :
     copy("./server.yml", "./roles/validate-windows/vars/.")
 
