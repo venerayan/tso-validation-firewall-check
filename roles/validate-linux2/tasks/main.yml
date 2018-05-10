@@ -133,7 +133,7 @@
   run_once: true
   become: no
 
-- name: Copy linux csv to first client
+- name: Copy linux csv to the client random
   copy:
     src: linux_output.csv
     dest: linux_output.csv
